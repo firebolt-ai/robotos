@@ -32,3 +32,9 @@ SOFTWARE.
 #if defined(NDEBUG)
 # error "[RobotOS][ERROR] Expected assertions, but none found."
 #endif
+
+#define WHOLE 1
+#define MICRO 0.1
+#define MULLA 0.01
+#define MILLA 0.001
+#define MELLA 0.0001
