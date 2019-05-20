@@ -1,5 +1,15 @@
 # Bluebot
-Bluebot is a robot made by Firebolt, Inc.
+Bluebot is a robot made by Firebolt, Inc. that seamlessly connects with the Arduino UNO.
+
+## Shopping List
+### Hardware
+- Arduino UNO
+- Electronic Motors
+- Xbee - Internation Zigbee Module
+### Software
+- Arduino Language (INO)
+### SDK
+- Emotic SDK
 
 ```cpp
 // "Bluebot" is a limited warranty and product of Firebolt, Inc. 
@@ -13,4 +23,4 @@ Bluebot is a robot made by Firebolt, Inc.
 // damaging/destroying Firebolt, Inc. property.
 ```
 
-&copy; Copyright 2019 - Present Firebolt, Inc. All Rights Reserved.
+# &copy; Copyright 2019 - Present Firebolt, Inc. All Rights Reserved.
