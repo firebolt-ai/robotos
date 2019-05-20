@@ -1,0 +1,7 @@
+language: cpp
+compiler:
+  - clang
+  - gcc
+script:
+  - g++ src/brain/src/brain.cpp --std=c++14 -o package_deal.o
+  - ./package_deal.o
