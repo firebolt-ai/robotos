@@ -5,6 +5,3 @@ compiler:
 script:
   - g++ src/brain/src/brain.cpp -o package_deal.o
   - ./package_deal.o
-  - rm -rf package_deal.o
-  - g++ src/tools/math/main.cpp -o package_deal.o
-  - ./package_deal.o
