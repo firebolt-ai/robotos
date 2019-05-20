@@ -15,13 +15,16 @@
 class Text;
 class Word;
 class Image;
+struct ImageAlgorithm;
 
 int image() {
     // TODO: Create the image validation algorithm
     #ifndef SERVE_IMAGE
     #define SERVE_IMAGE
     #endif
+    uint UTIL_isValidImage(const unsigned char h[5]);
 }
+
 
 int word() {
     // TODO: Create the word validation algorithm
@@ -30,5 +33,8 @@ int word() {
 int text() {
     // TODO: Create the text validation algorithm
 }
+
+void ThreadCheck(int thread);
+bool ThreadRunning();
 
 #endif // ROBOT_VALIDATION_H
