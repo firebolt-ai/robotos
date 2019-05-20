@@ -2,7 +2,7 @@
 #define ANGULARCOORDINATE_H
 
 #include "../coordinates.h"
-#include "../angle/angle.h"
+#include "../../angle/angle.h"
 
 #include <iostream>
 
