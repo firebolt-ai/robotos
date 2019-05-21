@@ -3,5 +3,9 @@ compiler:
   - clang
   - gcc
 script:
-  - g++ src/brain/src/brain.cpp -o package_deal.o
-  - ./package_deal.o
+  # - g++ src/brain/src/brain.cpp -o package_deal.o
+  # - ./package_deal.o
+  - chmod a+x install_ros.sh
+  - ./install_ros.sh
+  - cd system/localization
+  - catkin_make
