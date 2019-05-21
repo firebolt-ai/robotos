@@ -35,25 +35,25 @@ class MainWindow(QMainWindow):
         self.addToolBar(file_toolbar)
         file_menu = self.menuBar().addMenu("&File")
 
-        open_file_action = QAction(QIcon(os.path.join('images', 'blue-folder-open-document.png')), "Open file...", self)
+        open_file_action = QAction(QIcon(os.path.join('resources', 'blue-folder-open-document.png')), "Open file...", self)
         open_file_action.setStatusTip("Open file")
         open_file_action.triggered.connect(self.file_open)
         file_menu.addAction(open_file_action)
         file_toolbar.addAction(open_file_action)
 
-        save_file_action = QAction(QIcon(os.path.join('images', 'disk.png')), "Save", self)
+        save_file_action = QAction(QIcon(os.path.join('resources', 'disk.png')), "Save", self)
         save_file_action.setStatusTip("Save current page")
         save_file_action.triggered.connect(self.file_save)
         file_menu.addAction(save_file_action)
         file_toolbar.addAction(save_file_action)
 
-        saveas_file_action = QAction(QIcon(os.path.join('images', 'disk--pencil.png')), "Save As...", self)
+        saveas_file_action = QAction(QIcon(os.path.join('resources', 'disk--pencil.png')), "Save As...", self)
         saveas_file_action.setStatusTip("Save current page to specified file")
         saveas_file_action.triggered.connect(self.file_saveas)
         file_menu.addAction(saveas_file_action)
         file_toolbar.addAction(saveas_file_action)
 
-        print_action = QAction(QIcon(os.path.join('images', 'printer.png')), "Print...", self)
+        print_action = QAction(QIcon(os.path.join('resources', 'printer.png')), "Print...", self)
         print_action.setStatusTip("Print current page")
         print_action.triggered.connect(self.file_print)
         file_menu.addAction(print_action)
@@ -64,12 +64,12 @@ class MainWindow(QMainWindow):
         self.addToolBar(edit_toolbar)
         edit_menu = self.menuBar().addMenu("&Edit")
 
-        undo_action = QAction(QIcon(os.path.join('images', 'arrow-curve-180-left.png')), "Undo", self)
+        undo_action = QAction(QIcon(os.path.join('resources', 'arrow-curve-180-left.png')), "Undo", self)
         undo_action.setStatusTip("Undo last change")
         undo_action.triggered.connect(self.editor.undo)
         edit_menu.addAction(undo_action)
 
-        redo_action = QAction(QIcon(os.path.join('images', 'arrow-curve.png')), "Redo", self)
+        redo_action = QAction(QIcon(os.path.join('resources', 'arrow-curve.png')), "Redo", self)
         redo_action.setStatusTip("Redo last change")
         redo_action.triggered.connect(self.editor.redo)
         edit_toolbar.addAction(redo_action)
@@ -77,32 +77,32 @@ class MainWindow(QMainWindow):
 
         edit_menu.addSeparator()
 
-        cut_action = QAction(QIcon(os.path.join('images', 'scissors.png')), "Cut", self)
+        cut_action = QAction(QIcon(os.path.join('resources', 'scissors.png')), "Cut", self)
         cut_action.setStatusTip("Cut selected text")
         cut_action.triggered.connect(self.editor.cut)
         edit_toolbar.addAction(cut_action)
         edit_menu.addAction(cut_action)
 
-        copy_action = QAction(QIcon(os.path.join('images', 'document-copy.png')), "Copy", self)
+        copy_action = QAction(QIcon(os.path.join('resources', 'document-copy.png')), "Copy", self)
         copy_action.setStatusTip("Copy selected text")
         copy_action.triggered.connect(self.editor.copy)
         edit_toolbar.addAction(copy_action)
         edit_menu.addAction(copy_action)
 
-        paste_action = QAction(QIcon(os.path.join('images', 'clipboard-paste-document-text.png')), "Paste", self)
+        paste_action = QAction(QIcon(os.path.join('resources', 'clipboard-paste-document-text.png')), "Paste", self)
         paste_action.setStatusTip("Paste from clipboard")
         paste_action.triggered.connect(self.editor.paste)
         edit_toolbar.addAction(paste_action)
         edit_menu.addAction(paste_action)
 
-        select_action = QAction(QIcon(os.path.join('images', 'selection-input.png')), "Select all", self)
+        select_action = QAction(QIcon(os.path.join('resources', 'selection-input.png')), "Select all", self)
         select_action.setStatusTip("Select all text")
         select_action.triggered.connect(self.editor.selectAll)
         edit_menu.addAction(select_action)
 
         edit_menu.addSeparator()
 
-        wrap_action = QAction(QIcon(os.path.join('images', 'arrow-continue.png')), "Wrap text to window", self)
+        wrap_action = QAction(QIcon(os.path.join('resources', 'arrow-continue.png')), "Wrap text to window", self)
         wrap_action.setStatusTip("Toggle wrap text to window")
         wrap_action.setCheckable(True)
         wrap_action.setChecked(True)
