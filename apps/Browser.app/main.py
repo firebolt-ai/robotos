@@ -1,6 +1,14 @@
-import src.os
-import src.sys
-import src.pyqt5
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
+# from PyQt5.QtWebEngineWidgets import *
+from PyQt5.QtPrintSupport import *
+from PyQt5.QtWebChannel import *
+from PyQt5.QtWebSockets import *
+from PyQt5 import *
+
+import os
+import sys
 
 class AboutDialog(QDialog):
     def __init__(self, *args, **kwargs):
