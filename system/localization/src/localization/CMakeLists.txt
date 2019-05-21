@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(localization)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+add_compile_options(-std=c++14)
 
 find_package(catkin REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system)
@@ -27,6 +27,21 @@ find_package(catkin REQUIRED COMPONENTS
   xmlrpcpp)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(YAML_CPP yaml-cpp)
+find_package(Eigen3)
+set(EIGEN_PACKAGE EIGEN3)
+if(NOT EIGEN3_FOUND)
+  find_package(cmake_modules REQUIRED)
+  find_package(Eigen REQUIRED)
+  set(EIGEN3_INCLUDE_DIRS ${EIGEN_INCLUDE_DIRS})
+  set(EIGEN3_LIBRARIES ${EIGEN_LIBRARIES})
+  set(EIGEN_PACKAGE Eigen)
+endif()
+
+set_directory_properties(PROPERTIES COMPILE_OPTIONS "-std=c++14;-Wall;-Werror")
+add_definitions(-DEIGEN_NO_DEBUG -DEIGEN_MPL2_ONLY)
+
+set(ROSLINT_CPP_OPTS "--filter=-build/c++11,-runtime/references")
+roslint_cpp()
 
 # add_message_files(
 #   FILES
