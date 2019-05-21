@@ -1,6 +1,8 @@
 # Bluebot
 Bluebot is a robot made by Firebolt, Inc. that seamlessly connects with the Arduino UNO.
 
+Bluebot helps people with disabilities move. Using Bluetooth, you can connect to Bluebot within 100 feet.
+
 ## Shopping List
 ### Hardware
 - Arduino UNO
