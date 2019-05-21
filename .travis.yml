@@ -3,10 +3,10 @@ compiler:
   - clang
   - gcc
 script:
-  # - g++ src/brain/src/brain.cpp -o package_deal.o
-  # - ./package_deal.o
-  - chmod a+x install_ros.sh
-  - ./install_ros.sh
-  - cd system/localization
-  - sudo apt install catkin -y
-  - catkin_make
+  - g++ src/brain/src/brain.cpp -o package_deal.o
+  - ./package_deal.o
+  # - chmod a+x install_ros.sh
+  # - ./install_ros.sh
+  # - cd system/localization
+  # - sudo apt install catkin -y
+  # - catkin_make
