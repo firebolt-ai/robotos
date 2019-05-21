@@ -1,3 +1,5 @@
 devel
 build
+system/localization/build
+system/localization/devel
 .vscode
