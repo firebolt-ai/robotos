@@ -11,7 +11,25 @@ find_package(catkin REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-
+find_package(catkin REQUIRED COMPONENTS
+  diagnostic_msgs
+  diagnostic_updater
+  eigen_conversions
+  geographic_msgs
+  geometry_msgs
+  message_filters
+  message_generation
+  nav_msgs
+  nodelet
+  roscpp
+  roslint
+  sensor_msgs
+  std_msgs
+  std_srvs
+  tf2
+  tf2_geometry_msgs
+  tf2_ros
+  xmlrpcpp)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
