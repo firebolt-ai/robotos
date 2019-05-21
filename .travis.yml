@@ -8,4 +8,5 @@ script:
   - chmod a+x install_ros.sh
   - ./install_ros.sh
   - cd system/localization
+  - sudo apt install catkin -y
   - catkin_make
