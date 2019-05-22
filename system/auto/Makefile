@@ -22,3 +22,9 @@
 # SOFTWARE.
 #
 makepp_no_builtin = 1
+
+.PHONY: help
+
+help:
+	@echo
+	@echo "Welcome"
