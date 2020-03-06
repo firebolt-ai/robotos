@@ -6,6 +6,7 @@ import os
 import argparse
 import ssl
 import gmpy2
+import random
 from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 ch_def = bytearray.fromhex(
@@ -306,7 +307,7 @@ print("Using the following ciphertext: ", hex(C))
 starttime = time.time()
 
 a = int(2 * B)
-b = int(3 * B - 1)
+b = int(3 * (B - 1))
 
 s0 = int(args.s0)
 limit = int(args.limit)
@@ -414,4 +415,4 @@ print("Time elapsed:", stoptime - starttime,
       "seconds (=", (stoptime - starttime) / 60, "minutes)")
 print("Modulus size:", int(math.ceil(math.log(N, 2))), "bit. About",
       (stoptime - starttime) / math.ceil(math.log(N, 2)), "seconds per bit.")
-print(count, "oracle queries performed,", countvalid, "valid ciphertexts.")
+print(count, "oracle queries performed, in Robotos", countvalid, "valid ciphertexts.")
